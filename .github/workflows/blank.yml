@@ -19,7 +19,4 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: 
-          cd /root/CoderBlog
-          git pull
-          cp -r web/. /var/www/html/
+        script: cd /root/CoderBlog; git pull; cp -r web/. /var/www/html/;
