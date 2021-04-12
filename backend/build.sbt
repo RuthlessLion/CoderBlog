@@ -11,7 +11,8 @@ lazy val root = (project in file("."))
   .settings(
     libraryDependencies ++= Seq(
       "com.github.IndiscriminateCoding" %% "api4s-core" % "0.2.6",
-      "org.http4s" %% "http4s-blaze-server" % "0.21.21"
+      "org.http4s" %% "http4s-blaze-server" % "0.21.21",
+      "ch.qos.logback" % "logback-classic" % "1.1.3"
     ),
     api4sSources := Seq(Api4s.Src(
       file = sourceDirectory.value / "main" / "swagger" / "CoderBlog.yaml",

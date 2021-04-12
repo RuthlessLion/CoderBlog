@@ -10,7 +10,15 @@ class PostsService extends api.posts.Api[IO, IO] {
     Post(title = "Пост #2", body = "Тестовый текст поста.", id = "2")
   )
 
-  override def getPosts(numb: Option[Long], limit: Option[Long]): IO[List[Post]] = IO.pure(testPosts)
+  override def getPosts(numb: Option[Long], limit: Option[Long]): IO[List[Post]] = IO.pure{
+    val numbPosts = numb.map(_.toInt).map(testPosts.take).getOrElse(testPosts)
+    numbPosts.map(
+      post => post.copy(body = limit.map(limit => post.body.split(' ').reduce(
+        (acc, word) =>
+          if(s"$acc $word".length > limit) acc
+          else s"$acc $word"
+      )).getOrElse(post.body))
+    )}
 }
 
 object PostsService {

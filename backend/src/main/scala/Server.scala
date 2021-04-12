@@ -7,7 +7,7 @@ import services.PostsService
 object Server extends IOApp {
   override def run(args: List[String]): IO[ExitCode] = for {
     _ <- BlazeServerBuilder[IO]
-      .bindHttp(8080)
+      .bindHttp(8080, host = "0.0.0.0")
       .withHttpApp(PostsService())
       .resource
       .use(_ => IO.never)
