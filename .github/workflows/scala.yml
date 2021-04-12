@@ -2,7 +2,7 @@ name: Scala CI
 
 on:
   push:
-    paths: 'backend'
+    paths: 'backend/**'
     branches:
     - dev-back
     - dev
@@ -23,4 +23,4 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
     - name: Run tests
-      run: sbt test
+      run: sbt assembly
