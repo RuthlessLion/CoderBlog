@@ -1,1 +1,2 @@
 # CoderBlog
+Palette: ![#ecf0f1](https://via.placeholder.com/15/ecf0f1/000000?text=+) `#ecf0f1` ![#bdc3c7](https://via.placeholder.com/15/bdc3c7/000000?text=+) `#bdc3c7` ![#3498db](https://via.placeholder.com/15/3498db/000000?text=+) `#3498db` ![#2c3e50](https://via.placeholder.com/15/2c3e50/000000?text=+) `#2c3e50` 
