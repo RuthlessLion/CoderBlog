@@ -23,4 +23,5 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
     - name: Run tests
+      working-directory: backend
       run: sbt assembly
