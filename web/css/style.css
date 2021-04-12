@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+}
+#flex-container {
+    margin: 0 auto;
+    background: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+}
+#flex-container > div {
+    background: #ecf0f1;
+    width: 33%;
+    margin: 2px;
+    padding: 0px; 
+    height: 25em;
+}
+header {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+    min-height: 44px;
+    height: 3em;
+}
+footer{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+    min-height: 44px;
+    height: 3em;
+}
+footer > div > div {
+    margin-left: 2px;
+}
+.inline-header-content {
+    margin-right: 0.5em;
+    display: flex;
+    align-items: center; 
+}
+.inline-header-content > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+.avatar-main {
+    display: block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid #2c3e50;
+}
+@media only screen and (min-width: 414px) and (max-width: 767px) {
+.width-page {
+    width: 414px;
+}
+#flex-container > div {
+    width: 50%;
+    height: 13em;
+    width: 201px;
+}
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+.width-page {
+    width: 768px;
+}
+#flex-container > div {
+    height: 16em;
+    width: 252px;
+}
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+.width-page {
+    width: 992px;
+}
+#flex-container > div {
+    height: 21em;
+    width: 326px;
+}
+}
+@media only screen and (min-width: 1200px) {
+.width-page {
+    width: 1200px;
+}
+#flex-container > div {
+    width: 396px;
+}
+}
