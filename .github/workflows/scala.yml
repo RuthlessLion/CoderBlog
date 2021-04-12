@@ -2,7 +2,7 @@ name: Scala CI
 
 on:
   push:
-  paths: 'backend'
+    paths: 'backend'
     branches:
     - dev-back
     - dev
