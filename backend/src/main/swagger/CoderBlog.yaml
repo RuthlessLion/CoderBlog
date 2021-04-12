@@ -30,6 +30,36 @@ paths:
             type: array
             items:
               $ref: '#/definitions/Post'
+  /post/{id}:
+    get:
+      operationId: getPost
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+      responses:
+        200:
+          description: post
+          schema:
+            $ref: '#/definitions/Post'
+        404:
+          description: not found
+  /post:
+    post:
+      operationId: createPost
+      parameters:
+        - name: "body"
+          in: "body"
+          required: true
+          schema:
+            $ref: '#/definitions/Post'
+      responses:
+        200:
+          description: post created
+        409:
+          description: post with this id already exists
+
 definitions:
   Post:
     type: "object"

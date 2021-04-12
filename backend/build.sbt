@@ -19,7 +19,7 @@ lazy val root = (project in file("."))
       pkg = "ru.codercat.api.posts",
       server = true,
       client = false
-    )),
+    ).without4xx.without5xx),
     mainClass in assembly := Some("ru.codercat.Server"),
     assemblyJarName in assembly := "CoderBlog.jar"
   )
