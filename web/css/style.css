@@ -5,13 +5,13 @@
     padding: 0;
     background: #ffffff;
 }
-#flex-container {
+#main-block-container {
     margin: 0 auto;
     background: #ffffff;
     display: flex;
     flex-wrap: wrap;
 }
-#flex-container > div {
+#main-block-container > div {
     background: #ecf0f1;
     width: 33%;
     margin: 2px;
@@ -55,7 +55,7 @@ footer > div > div {
 .width-page {
     width: 414px;
 }
-#flex-container > div {
+#main-block-container > div {
     width: 50%;
     height: 13em;
     width: 201px;
@@ -65,7 +65,7 @@ footer > div > div {
 .width-page {
     width: 768px;
 }
-#flex-container > div {
+#main-block-container > div {
     height: 16em;
     width: 252px;
 }
@@ -75,7 +75,7 @@ footer > div > div {
 .width-page {
     width: 992px;
 }
-#flex-container > div {
+#main-block-container > div {
     height: 21em;
     width: 326px;
 }
@@ -84,7 +84,7 @@ footer > div > div {
 .width-page {
     width: 1200px;
 }
-#flex-container > div {
+#main-block-container > div {
     width: 396px;
 }
 }
