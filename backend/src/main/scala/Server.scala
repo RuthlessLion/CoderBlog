@@ -3,7 +3,7 @@ package ru.codercat
 import cats.effect.{ExitCode, IO, IOApp}
 import org.http4s.server.blaze.BlazeServerBuilder
 import services.PostsService
-import ru.codercat.utils.HttpError
+import utils.HttpError
 
 import org.http4s.Response
 
