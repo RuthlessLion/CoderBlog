@@ -2,9 +2,10 @@ name: Scala CI
 
 on:
   push:
-    paths: 'backend/**'
+    paths: 
+    - 'backend/**'
+    - '.github/workflows/scala.yml'
     branches:
-    - dev-back
     - dev
   pull_request:
     branches: 
@@ -22,6 +23,23 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt'
-    - name: Run tests
+    - name: Run build
       working-directory: backend
       run: sbt assembly
+    - name: Copy jar
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        source: "backend/target/scala-2.13/CoderBlog.jar"
+        target: "/root/"
+    - name: Restart app
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script: systemctl restart CoderBlog.service
