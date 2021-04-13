@@ -15,18 +15,22 @@
         </div>
     </header>
     <div id='main-block-container' class="width-page">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
-        <div>11</div>
-        <div>12</div>
+        <script>
+            fetch('api/posts').then(response => {
+                return response.json()
+            }).then(jsonPosts => {
+                JSON.parse(jsonPosts).forEach(post => {
+                    createDiv(post.title, body)
+                });
+            })
+
+            function createDiv(title, text) {
+                let divElement = document.createElement("div")
+                let textElement = document.createTextNode(`${title}: ${text}`)
+                divElement.appendChild(textElement)
+                document.getElementById("main-block-container").appendChild(divElement)
+            }
+        </script>
       </div>
       <footer class="width-page">
         <div class="inline-header-content">
