@@ -35,6 +35,7 @@ jobs:
         port: ${{ secrets.PORT }}
         source: "backend/target/scala-2.13/CoderBlog.jar"
         target: "/root/"
+        strip_components: 3
     - name: Restart app
       uses: appleboy/ssh-action@master
       with:
