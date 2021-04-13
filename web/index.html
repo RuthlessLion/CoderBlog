@@ -18,9 +18,9 @@
         <script>
             fetch('/api/posts').then(response => {
                 return response.json()
-            }).then(jsonPosts => {
-                JSON.parse(jsonPosts).forEach(post => {
-                    createDiv(post.title, body)
+            }).then(posts => {
+                posts.forEach(post => {
+                    createDiv(post.title, post.body)
                 });
             })
 
