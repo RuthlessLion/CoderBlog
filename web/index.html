@@ -16,7 +16,7 @@
     </header>
     <div id='main-block-container' class="width-page">
         <script>
-            fetch('api/posts').then(response => {
+            fetch('/api/posts').then(response => {
                 return response.json()
             }).then(jsonPosts => {
                 JSON.parse(jsonPosts).forEach(post => {
