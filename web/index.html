@@ -15,28 +15,63 @@
         </div>
     </header>
     <div id='main-block-container' class="width-page">
-        <script>
-            fetch('/api/posts').then(response => {
-                return response.json()
-            }).then(posts => {
-                posts.forEach(post => {
-                    createDiv(post.title, post.body)
-                });
-            })
-
-            function createDiv(title, text) {
-                let divElement = document.createElement("div")
-                let textElement = document.createTextNode(`${title}: ${text}`)
-                divElement.appendChild(textElement)
-                document.getElementById("main-block-container").appendChild(divElement)
-            }
-        </script>
-      </div>
-      <footer class="width-page">
+        <div>
+            <div class="text-block">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt laborum ipsam velit dignissimos dolorem maiores quaerat non quam quasi, fugit, voluptates quidem accusantium, laudantium sed dicta odio atque. Saepe, adipisci. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nostrum iusto alias harum natus labore reiciendis nisi tempore? Cumque veniam, eaque aliquid tempora saepe distinctio...
+            </div>
+            <a class="text-block-link" href="">Открыть полную версию</a>
+        </div>
+        <div>
+            <div class="text-block"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt laborum ipsam velit dignissimos dolorem maiores quaerat non quam quasi, fugit, voluptates quidem accusantium, laudantium sed dicta odio atque. Saepe, adipisci.</p></div>
+            <a class="text-block-link" href="">Открыть полную версию</a>
+        </div>
+        <div>
+            <div class="text-block"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt laborum ipsam velit dignissimos dolorem maiores quaerat non quam quasi, fugit, voluptates quidem accusantium, laudantium sed dicta odio atque. Saepe, adipisci.</p></div>
+            <a class="text-block-link" href="">Открыть полную версию</a>
+        </div>
+        <div>
+            <div class="text-block"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt laborum ipsam velit dignissimos dolorem maiores quaerat non quam quasi, fugit, voluptates quidem accusantium, laudantium sed dicta odio atque. Saepe, adipisci.</p></div>
+            <a class="text-block-link" href="">Открыть полную версию</a>
+        </div>
+        <div>
+            <div class="text-block"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt laborum ipsam velit dignissimos dolorem maiores quaerat non quam quasi, fugit, voluptates quidem accusantium, laudantium sed dicta odio atque. Saepe, adipisci.</p></div>
+            <a class="text-block-link" href="">Открыть полную версию</a>
+        </div>
+        <div>
+            <div class="text-block"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt laborum ipsam velit dignissimos dolorem maiores quaerat non quam quasi, fugit, voluptates quidem accusantium, laudantium sed dicta odio atque. Saepe, adipisci.</p></div>
+            <a class="text-block-link" href="">Открыть полную версию</a>
+        </div>
+        <div>
+            <div class="text-block"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt laborum ipsam velit dignissimos dolorem maiores quaerat non quam quasi, fugit, voluptates quidem accusantium, laudantium sed dicta odio atque. Saepe, adipisci.</p></div>
+            <a class="text-block-link" href="">Открыть полную версию</a>
+        </div>
+        <div>
+            <div class="text-block"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt laborum ipsam velit dignissimos dolorem maiores quaerat non quam quasi, fugit, voluptates quidem accusantium, laudantium sed dicta odio atque. Saepe, adipisci.</p></div>
+            <a class="text-block-link" href="">Открыть полную версию</a>
+        </div>
+        <div>
+            <div class="text-block"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt laborum ipsam velit dignissimos dolorem maiores quaerat non quam quasi, fugit, voluptates quidem accusantium, laudantium sed dicta odio atque. Saepe, adipisci.</p></div>
+            <a class="text-block-link" href="">Открыть полную версию</a>
+        </div>
+        <div>
+            <div class="text-block"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt laborum ipsam velit dignissimos dolorem maiores quaerat non quam quasi, fugit, voluptates quidem accusantium, laudantium sed dicta odio atque. Saepe, adipisci.</p></div>
+            <a class="text-block-link" href="">Открыть полную версию</a>
+        </div>
+        <div>
+            <div class="text-block"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt laborum ipsam velit dignissimos dolorem maiores quaerat non quam quasi, fugit, voluptates quidem accusantium, laudantium sed dicta odio atque. Saepe, adipisci.</p></div>
+            <a class="text-block-link" href="">Открыть полную версию</a>
+        </div>
+        <div>
+            <div class="text-block"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt laborum ipsam velit dignissimos dolorem maiores quaerat non quam quasi, fugit, voluptates quidem accusantium, laudantium sed dicta odio atque. Saepe, adipisci.</p></div>
+            <a class="text-block-link" href="">Открыть полную версию</a>
+        </div>
+    </div>
+    <footer class="width-page">
         <div class="inline-header-content">
             <div><a href="https://github.com/RuthlessLion"><img class="avatar-main" src="images/avatar_admin.png" loading="lazy"></a></div>
             <div><a href="https://github.com/intfox"><img class="avatar-main" src="https://avatars.githubusercontent.com/u/25611848?v=4" loading="lazy"></a></div>
         </div>
     </footer>
+    <script src="js/main.js">getpost();</script>
 </body>
 </html>

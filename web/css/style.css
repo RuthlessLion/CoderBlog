@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     background: #ffffff;
+    text-decoration: none;
 }
 #main-block-container {
     margin: 0 auto;
@@ -50,6 +51,25 @@ footer > div > div {
     width: 40px;
     border-radius: 50%;
     border: 1px solid #2c3e50;
+}
+.text-block{
+    font-weight: 300;
+    font-size: x-large;
+    overflow: hidden;
+    margin: 4% auto;
+    display: block;
+    height: 83%;
+    width: 92%;
+    background: #ecf0f1;
+}
+.text-block-link{
+    float: right;
+    margin-right: 1em;
+    background: #ecf0f1;
+    color: #3498db;
+}
+.text-block > p {
+    background: #ecf0f1;
 }
 @media only screen and (min-width: 414px) and (max-width: 767px) {
 .width-page {
