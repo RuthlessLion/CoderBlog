@@ -11,7 +11,10 @@ function getpost() {
 
 function createDiv(title, text) {
     let divElement = document.createElement("div")
-    let textElement = document.createTextNode(`${title}: ${text}`)
-    divElement.appendChild(textElement)
+    let textBlock = document.createElement("div")
+    let textElement = document.createTextNode(text)
+    textBlock.appendChild(textElement)
+    textBlock.className = "text-block"
+    divElement.appendChild(textBlock)
     document.getElementById("main-block-container").appendChild(divElement)
 }
