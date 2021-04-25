@@ -15,7 +15,11 @@ paths:
     get:
       operationId: getPosts
       parameters:
-        - name: numb
+        - name: page
+          in: query
+          required: false
+          type: integer
+        - name: page_size
           in: query
           required: false
           type: integer
@@ -48,6 +52,8 @@ paths:
   /post:
     post:
       operationId: createPost
+      security:
+        - basicAuth: []
       parameters:
         - name: "body"
           in: "body"
@@ -74,3 +80,7 @@ definitions:
         type: string
       id:
         type: string
+
+securityDefinitions:
+  basicAuth:
+    type: basic
