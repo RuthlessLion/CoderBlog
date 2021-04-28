@@ -9,7 +9,7 @@ import org.http4s.Status
 class PostsService extends api.posts.Api[IO, IO] {
   private val posts = collection.concurrent.TrieMap[String, Post]()
 
-  override def getPosts(page: Option[Long], page_size: Option[Long], limit: Option[Long]): IO[List[Post]] = IO.pure {
+  override def getPosts(page: Option[Long], page_size: Option[Long], limit: Option[Long]): IO[List[Post]] = IO.delay {
     val listPosts = posts.toList.map(_._2)
     val numbPosts = (for {
       pageSizeValue <- page_size
